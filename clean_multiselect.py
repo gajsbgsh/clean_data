@@ -49,7 +49,9 @@ def main():
                 condition = filter_col_layout[i].text_input(f"输入 {col_name} 的具体值", key=f"value_{i}")
             else:
                 condition = None
-            filter_conditions.append((col_name, filter_option, condition))
+
+            if filter_option != '无':  # 只有在 filter_option 不是 '无' 时才添加筛选条件
+                filter_conditions.append((col_name, filter_option, condition))
 
         # 提交筛选条件和复原按钮
         filter_button, reset = st.columns(2)
