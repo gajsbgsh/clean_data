@@ -14,7 +14,7 @@ st.title("主观题分析")
 st.write("请输入最多 100 行文本，每行文本将由 GPT-3.5 根据你提供的示例进行分类。")
 
 # 获取用户输入的 prompt 和示例
-user_prompt = st.text_input("请输入自定义 prompt：")
+user_prompt = st.text_input("请输入自定义 prompt，描述你要分析的文本的内容：")
 user_examples = st.text_area("请输入分类示例（每行一个，格式：文本:内容。分类:内容）：", height=200)
 
 # 解析示例
