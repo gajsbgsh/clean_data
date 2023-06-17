@@ -3,9 +3,11 @@ import streamlit as st
 import pandas as pd
 import os
 
+# 从 Streamlit secrets 获取密钥并设置为环境变量
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+
 # 设置 OpenAI API 密钥
-openai.api_key = os.environ["OPENAI.API_KEY"]
-os.environ["OPENAI.API_KEY"] == st.secrets["OPENAI.API_KEY"]
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # 创建 Streamlit 应用
 st.title("主观题分析")
