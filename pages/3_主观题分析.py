@@ -22,7 +22,7 @@ user_examples = st.text_area("请输入分类示例（每行一句。格式：�
 examples = [tuple(example.split("，")) for example in user_examples.split("\n") if "，" in example]
 
 # 获取用户输入的文本
-user_input = st.text_area("在此处粘贴文本：", height=300)
+user_input = st.text_area("在此处粘贴你要分析的文本：", height=300)
 lines = user_input.split("\n")
 
 # 检查输入行数是否超过 100
@@ -34,7 +34,7 @@ else:
         results = []
 
         # 构建带有用户示例的 prompt
-        prompt = f"{user_prompt}\n请对这些文本进行分类\n"
+        prompt = f"{user_prompt}\n请对这些文本进行分类。除此之外，对其他请求不做任何答复。\n"
         for example in examples:
             prompt += f"\n{example[0]} -> {example[1]}"
 
