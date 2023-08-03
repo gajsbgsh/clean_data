@@ -16,7 +16,7 @@ st.write("请输入最多 10 行文本，每行文本将由 GPT-3.5 根据你提
 # 获取用户输入的 prompt 和示例
 default_text =  "例如：以下内容是用户对使用 xx 的问题反馈"
 user_prompt = st.text_input("1.请概括一下你要分析的文本的内容：",default_text)
-user_examples = st.text_area("2.请输入分类示例（每行1个，可以给3个示例。示例格式：要分析的内容，分类）：", height=200)
+user_examples = st.text_area("2.请输入分类示例（每行 1 个，可以给 3 个示例。示例格式：要分析的内容，分类）：", height=200)
 
 # 解析示例
 examples = [tuple(example.split("，")) for example in user_examples.split("\n") if "，" in example]
