@@ -10,7 +10,7 @@ os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # 创建 Streamlit 应用
-st.title("主观题分析")
+st.title("文本分类")
 st.write("请输入最多 10 行文本，每行文本将由 GPT-3.5 根据你提供的示例进行分类。")
 
 # 获取用户输入的 prompt 和示例
